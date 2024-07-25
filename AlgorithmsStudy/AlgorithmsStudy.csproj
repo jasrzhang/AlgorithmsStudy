@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <StartupObject>AlgorithmsStudy.BST.BSTRInsertion</StartupObject>
+    <StartupObject>AlgorithmsStudy.Search.Search</StartupObject>
   </PropertyGroup>
 
 </Project>

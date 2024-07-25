@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -205,6 +206,39 @@ namespace AlgorithmsStudy.BST
             return true;
         }
 
+        // Method to count numbers of nodes
+        public int Count(Node temproot)
+        {
+            if (temproot != null)
+            {
+                int x = Count(temproot.left);
+                int y = Count(temproot.right);
+                return x + y + 1;
+            }
+            return 0;
+        }
+
+        // Method to count the total level the tree
+        // use 'return 0' if return the level
+        // use 'return -1' if return the atcual height
+        public int Height(Node temproot)
+        {
+            if (temproot != null)
+            {
+                int x = Height(temproot.left);
+                int y = Height(temproot.right);
+                if (x > y)
+                {
+                    return x + 1;
+                }
+                else
+                {
+                    return y + 1;
+                }
+            }
+            return -1;
+        }
+
         static void Main(string[] args)
         {
             BSTRInsertion insertion = new BSTRInsertion();
@@ -231,15 +265,20 @@ namespace AlgorithmsStudy.BST
             insertion.Levelorder();
             Console.WriteLine();
 
-            insertion.Delete(50);
-            Console.WriteLine("Inorder Traversal");
-            insertion.Inorder(insertion.root);
-            Console.WriteLine();
+
 
             Console.WriteLine("Iterative Search result 60, expected True: " + insertion.Search(60));
             Console.WriteLine("Iterative Search result 70, expected False:" + insertion.Search(70));
             Console.WriteLine("Recursive Search result 60, expected True :" + insertion.RSearch(insertion.root, 60));
             Console.WriteLine("Recursive Search result 70, expected False :" + insertion.RSearch(insertion.root, 70));
+
+            Console.WriteLine("Count result of method count: " + insertion.Count(insertion.root));
+            Console.WriteLine("Height result of method Height: " + insertion.Height(insertion.root));
+
+            insertion.Delete(50);
+            Console.WriteLine("Inorder Traversal After Deletion");
+            insertion.Inorder(insertion.root);
+            Console.WriteLine();
 
             Console.WriteLine();
 
