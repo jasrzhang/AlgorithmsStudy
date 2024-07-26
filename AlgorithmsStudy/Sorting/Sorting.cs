@@ -229,12 +229,12 @@ namespace AlgorithmsStudy.Sorting
             int pivot = arr[high];
             int i = (low - 1);
 
+            // Move the least number to the left of the partition
             for (int j = low; j < high; j++)
             {
                 if (arr[j] <= pivot)
                 {
                     i++;
-
                     //Swap arr[i] and arr[j]
                     var temp = arr[i];
                     arr[i] = arr[j];

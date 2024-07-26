@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <StartupObject>AlgorithmsStudy.Sorting.Sorting</StartupObject>
+    <StartupObject>AlgorithmsStudy.Stack.StacksLinkedList</StartupObject>
   </PropertyGroup>
 
 </Project>
