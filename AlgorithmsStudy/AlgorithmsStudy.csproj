@@ -3,7 +3,11 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <StartupObject>AlgorithmsStudy.Stack.StacksLinkedList</StartupObject>
+    <StartupObject>AlgorithmsStudy.Heaps.Heap</StartupObject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Hashing\" />
+  </ItemGroup>
 
 </Project>
